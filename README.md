@@ -16,6 +16,11 @@ https://drive.google.com/file/d/1NkH5iKcrzQZL7gwoF2FHm7-p0A2dK7ya/view?usp=drive
 
 Распаковать веса архив в /reviews/AlbertForClassification
 
+## Citation
+
+If you use this paper, please cite it as:
+
+```bibtex
 @InProceedings{maas-EtAl:2011:ACL-HLT2011,
   author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and  Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
   title     = {Learning Word Vectors for Sentiment Analysis},
