@@ -1,0 +1,65 @@
+<!-- reviews/templates/reviews/review_result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат отзыва</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Контейнер для центрирования содержимого */
+        .centered-container {
+            display: flex;
+            justify-content: center;  /* Горизонтальное центрирование */
+            align-items: center;  /* Вертикальное центрирование */
+            height: 100%;  /* Высота контейнера — 100% от экрана */
+            text-align: center;
+        }
+
+        /* Стили для содержимого */
+        .content {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+        <div class="content">
+    <h2>Результат анализа отзыва</h2>
+    <p><strong>Рейтинг:</strong> {{ rating }}</p>
+    <p><strong>Статус отзыва:</strong> {{ sentiment }}</p>
+    <p><strong>Текст отзыва:</strong></p>
+    <p>{{ review_text }}</p>
+    <a href="{% url 'submit_review' %}">Отправить еще отзыв</a>
+    </div>
+    </div>
+</body>
+</html>

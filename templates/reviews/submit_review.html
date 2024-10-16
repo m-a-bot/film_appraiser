@@ -1,0 +1,75 @@
+<!-- reviews/templates/reviews/submit_review.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправить отзыв</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Контейнер для центрирования содержимого */
+        .centered-container {
+            display: flex;
+            justify-content: center;  /* Горизонтальное центрирование */
+            align-items: center;  /* Вертикальное центрирование */
+            height: 100%;  /* Высота контейнера — 100% от экрана */
+            text-align: center;
+        }
+
+        /* Стили для содержимого */
+        .content {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover, button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+        <div class="content">
+    <h1>Отправить отзыв о фильме</h1>
+    <form method="post">
+   	{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить отзыв</button>
+    </form>
+    </div>
+    </div>  
+</body>
+</html>
